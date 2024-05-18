@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Innovación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-title">
+                <h1>PROYECTO DE INNOVACIÓN</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./sem1.html">Semana 1</a></li>
+                    <li><a href="./sem2.html">Semana 2</a></li>
+                    <li><a href="./sem3.html">Semana 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="carousel">
+            <input type="radio" id="slide1" name="slides" checked>
+            <input type="radio" id="slide2" name="slides">
+            <input type="radio" id="slide3" name="slides">
+            <div class="slides">
+                <div class="slide slide1">
+                    <img src="./img/index_large.png" alt="Slide 1">
+                </div>
+                <div class="slide slide2">
+                    <img src="./img/index_large_2.png" alt="Slide 2">
+                </div>
+                <div class="slide slide3">
+                    <img src="./img/index_large_3.png" alt="Slide 3">
+                </div>
+            </div>
+            <div class="navigation">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+
+        <div class="sobremi">
+            <h2>SOBRE MÍ</h2>
+            <div class="description">
+                <p>¡Hola a todos! Soy Lesly de la Guarda, una apasionada estudiante de arquitectura de interiores,
+                    actualmente tengo 23 años y trabajo como supervisora en una inmobiliaria. Acompáñenme en este
+                    emocionante viaje donde exploramos la creatividad y la innovación en el mundo del diseño de
+                    interiores. ¡Bienvenidos a mi Bitácora, donde cada proyecto es una oportunidad para inspirar y ser
+                    inspirados!</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <img src="./img/index_1.png" alt="Imagen 1">
+            <img src="./img/index_2.png" alt="Imagen 2">
+            <img src="./img/index_3.png" alt="Imagen 3">
+        </div>
+    </main>
+</body>
+<script>
+    // Función para cambiar automáticamente el slide cada 3 segundos
+    setInterval(() => {
+        // Obtener todos los radios de entrada del grupo
+        const slides = document.querySelectorAll('input[name="slides"]');
+        // Obtener el input radio actualmente seleccionado
+        const currentSlide = document.querySelector('input[name="slides"]:checked');
+        // Obtener el índice del slide actual
+        const currentIndex = Array.from(slides).indexOf(currentSlide);
+        // Obtener el índice del próximo slide
+        const nextIndex = (currentIndex + 1) % slides.length;
+        // Seleccionar el próximo slide
+        slides[nextIndex].checked = true;
+    }, 2500); // Cambiar cada 3 segundos
+</script>
+
+</html>
