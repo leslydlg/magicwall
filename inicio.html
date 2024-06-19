@@ -17,12 +17,37 @@
             <div class="header-title">
                 <h1>PROYECTO DE INNOVACIÓN</h1>
             </div>
-
             <nav>
                 <ul>
-                    <li><a href="./sem1.html">Semana 1</a></li>
-                    <li><a href="./sem2.html">Semana 2</a></li>
-                    <li><a href="./sem3.html">Semana 3</a></li>
+                    <li><a href="./index.html">¿Qué es?</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Desarrollo del Proyecto</a>
+                        <div class="dropdown-content">
+                            <a href="./inicio.html">Sobre Mi</a>
+                            <a href="javascript:void(0)">1er Promedio</a>
+                            <div class="dropdown-content-sub">
+                                <a href="./sem1.html">Semana 1</a>
+                                <a href="./sem2.html">Semana 2</a>
+                                <a href="./sem3.html">Semana 3</a>
+                                <a href="./sem4.html">Semana 4</a>
+                            </div>
+                            <a href="javascript:void(0)">2do Promedio</a>
+                            <div class="dropdown-content-sub">
+                                <a href="./sem5.html">Semana 5</a>
+                                <a href="./sem6.html">Semana 6</a>
+                                <a href="./sem7.html">Semana 7</a>
+                                <a href="./sem8.html">Semana 8</a>
+                            </div>
+                            <a href="javascript:void(0)">3er Promedio</a>
+                            <div class="dropdown-content-sub">
+                                <a href="./sem9.html">Semana 9</a>
+                                <a href="./sem10.html">Semana 10</a>
+                                <a href="./sem11.html">Semana 11</a>
+                                <a href="./sem12.html">Semana 12</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="./mision-vision.html">Misión y Visión</a></li>
                 </ul>
             </nav>
         </div>
@@ -69,19 +94,13 @@
     </main>
 </body>
 <script>
-    // Función para cambiar automáticamente el slide cada 3 segundos
     setInterval(() => {
-        // Obtener todos los radios de entrada del grupo
         const slides = document.querySelectorAll('input[name="slides"]');
-        // Obtener el input radio actualmente seleccionado
         const currentSlide = document.querySelector('input[name="slides"]:checked');
-        // Obtener el índice del slide actual
         const currentIndex = Array.from(slides).indexOf(currentSlide);
-        // Obtener el índice del próximo slide
         const nextIndex = (currentIndex + 1) % slides.length;
-        // Seleccionar el próximo slide
         slides[nextIndex].checked = true;
-    }, 2500); // Cambiar cada 3 segundos
+    }, 2500);
 </script>
 
 </html>
